@@ -32,6 +32,7 @@ def main(filename):
                 row = row.replace(key, space_dict[key])
 
             if "<%=" in row:
+                row = row.replace("<%= @", "{{ ")
                 row = row.replace("<%=", "{{")
                 row = row.replace("%>", "}}")
             elif "<% if" in row:
